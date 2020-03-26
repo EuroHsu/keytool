@@ -1,0 +1,24 @@
+{
+  "name": "keytool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "genBtcKey.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EuroHsu/keytool.git"
+  },
+  "author": "eurohsu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EuroHsu/keytool/issues"
+  },
+  "homepage": "https://github.com/EuroHsu/keytool#readme",
+  "dependencies": {
+    "bitcoinjs-lib": "^5.1.7",
+    "eosjs-ecc": "^4.0.7",
+    "web3": "^1.2.6"
+  }
+}
