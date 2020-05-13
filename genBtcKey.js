@@ -7,7 +7,11 @@ const keyPair = bitcoin.ECPair.makeRandom({ network })
 if (info) {
   console.log('Private Key:', keyPair.toWIF())
   console.log('Public Key:', keyPair.publicKey.toString('hex'))
-  console.log('Address:', bitcoin.payments.p2pkh({ network, pubkey: keyPair.publicKey }).address)
+  console.log('P2PKH Address:', bitcoin.payments.p2pkh({ network, pubkey: keyPair.publicKey }).address)
+  const p2wpkh = bitcoin.payments.p2wpkh({pubkey: keyPair.publicKey, network})
+  const p2sh = bitcoin.payments.p2sh({redeem: p2wpkh, network})
+  console.log('Redeem script:', p2sh.redeem.output.toString('hex'))
+  console.log('P2SH Address:', p2sh.address)
 } else {
   console.log(keyPair.toWIF())
 }
