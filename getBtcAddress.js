@@ -7,7 +7,7 @@ const privKey = argv.key
 const keyPair = new bitcoin.ECPair.fromWIF(privKey, network)
 if (p2sh) {
   const p2wpkh = bitcoin.payments.p2wpkh({pubkey: keyPair.publicKey, network})
-  console.log('P2SH Address:', bitcoin.payments.p2sh({redeem: p2wpkh, network}).address)
+  console.log(bitcoin.payments.p2sh({redeem: p2wpkh, network}).address)
 } else {
   console.log(bitcoin.payments.p2pkh({ network, pubkey: keyPair.publicKey }).address)
 }
