@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/EuroHsu/keytool#readme",
   "dependencies": {
+    "bip32": "^2.0.5",
+    "bip39": "^3.0.2",
     "bitcoinjs-lib": "^5.1.7",
     "eosjs-ecc": "^4.0.7",
+    "ethereumjs-wallet": "^0.6.3",
     "web3": "^1.2.6"
   }
 }
