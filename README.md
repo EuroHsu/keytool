@@ -12,6 +12,39 @@
 npm install
 ```
 
+## 生成註記詞
+
+```bash
+$ node genMnemonic.js
+umbrella desert resemble wrestle census chief hidden cheap void cluster forum lawn
+
+$ node genMnemonic.js --info
+Mnemonic: umbrella desert resemble wrestle census chief hidden cheap void cluster forum lawn
+BTC { 'Private Key': 'L3RV6KjiCeMFfMxJaLqhUTjfdNXsXL9PceS5FhDhrXfvnxQ3vyhf',
+  'Public Key': '02fbef8e5ce6d0b0b8d45ea8e6e2de818439610e415fae0e53bb0564ae2b29475b',
+  'P2PKH Address': '1Q4VJJGSVZkCUDjmcCyUuoGyYbDQYcN6yH',
+  'Redeem script': '0014fcf3c359e0035a466728e1e10c2211ba50582a5c',
+  'P2SH Address': '35ZmVc8wy9dnbtLkWzgecV1Sfgnbi1irQT' }
+ETH { 'Private Key': '0x8581dbc77b9addf6058e56521197e3834f9694ed1f11f96d0691d9a588098b34',
+  'Public Key': '0x02f4baca2232eae7bc4f9bf0feff18dac51f4952a694b6d55712470b1d1f2e39ac',
+  Address: '0xecC6868649494C31BC4503C04C9C9B5c8Aa74CbE' }
+EOS { 'Private Key': '5Jojx7poMEtiWKLoQMcZRA6KDUb3vBPxQiyUq4HwBScYM6QPFv7',
+  'Public Key': 'EOS5wM6PEAYfR48kGKwd8twDFEHyyestZwQKwzv1eSdDuPnrLEpaG' }
+
+$ node genMnemonic.js --info --test
+Mnemonic: umbrella desert resemble wrestle census chief hidden cheap void cluster forum lawn
+BTC { 'Private Key': 'cTnUZEjZdi3WpoRZxkepqnEjFbqHBnF5ggaYN7gDMeKw3hQqa6Hg',
+  'Public Key': '02fbef8e5ce6d0b0b8d45ea8e6e2de818439610e415fae0e53bb0564ae2b29475b',
+  'P2PKH Address': 'n4aSbMMRJbBTFLDPKmwrjiVJQap7Sk1j3P',
+  'Redeem script': '0014fcf3c359e0035a466728e1e10c2211ba50582a5c',
+  'P2SH Address': '2Mw7yZM4yac98ofyJC8JXERzht2zmZZkk13' }
+ETH { 'Private Key': '0x8581dbc77b9addf6058e56521197e3834f9694ed1f11f96d0691d9a588098b34',
+  'Public Key': '0x02f4baca2232eae7bc4f9bf0feff18dac51f4952a694b6d55712470b1d1f2e39ac',
+  Address: '0xecC6868649494C31BC4503C04C9C9B5c8Aa74CbE' }
+EOS { 'Private Key': '5Jojx7poMEtiWKLoQMcZRA6KDUb3vBPxQiyUq4HwBScYM6QPFv7',
+  'Public Key': 'EOS5wM6PEAYfR48kGKwd8twDFEHyyestZwQKwzv1eSdDuPnrLEpaG' }
+```
+
 ## 生成私鑰
 
 ### Bitcoin
@@ -105,4 +138,20 @@ $ node getBtcAddress --test --p2sh --key cV53vn1FmaAAXHHWExQJQtdKrHMP6vBtmaLMSYi
 ```bash
 $ node getEthAddress.js --key 0x86b299c405b2254d95104dd0b8565a4a432d06ebcde39e7596d8fcded9a99913
 0xf9ecE109C4aCd8918088191f9476a493D224Ed85
+```
+
+## 其他
+
+### 計算以太坊合約地址
+
+```bash
+$ node getEthContractAddress.js --info
+以太坊合約的地址是根據創建者(sender)的地址以及創建者發送過的交易數量(nonce)來計算的
+sender 和 nonce 進行 RLP 編碼，然後用 Keccak-256 進行 hash 計算
+請輸入sender: 0xB72FB3250268222E01A57b19B02db6268884BBDe
+請輸入nonce: 2
+合約地址: 0xA7254e5aF10793B520b4d4ad7F717b1b65aCeb4c
+
+$ node getEthContractAddress.js --sender 0xB72FB3250268222E01A57b19B02db6268884BBDe --nonce 2
+0xA7254e5aF10793B520b4d4ad7F717b1b65aCeb4c
 ```
