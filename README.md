@@ -106,6 +106,10 @@ Public Key: EOS8SzqgK9agCgHMUyACcpAbEnFD5fCrwKGWdPDnJtfMoB4f7cT3P
 mainnet
 
 ```bash
+$ node getBtcAddress.js
+請輸入私鑰: L1ifct6bkazBWLJ8QKarA1icASL8z7gq38r63BJAjyqMge2Z4J4y
+1DTKdoBJcwYiRFR5u9mzbXyw98QGwoikuG
+
 $ node getBtcAddress.js --key L1ifct6bkazBWLJ8QKarA1icASL8z7gq38r63BJAjyqMge2Z4J4y
 1DTKdoBJcwYiRFR5u9mzbXyw98QGwoikuG
 ```
@@ -113,6 +117,10 @@ $ node getBtcAddress.js --key L1ifct6bkazBWLJ8QKarA1icASL8z7gq38r63BJAjyqMge2Z4J
 testnet
 
 ```bash
+$ node getBtcAddress --test
+請輸入私鑰: cV53vn1FmaAAXHHWExQJQtdKrHMP6vBtmaLMSYib6QP2oU8ch78g
+mvhZ6uTiBbaQ15S2q12asT47XAwtqMzhUm
+
 $ node getBtcAddress --test --key cV53vn1FmaAAXHHWExQJQtdKrHMP6vBtmaLMSYib6QP2oU8ch78g
 mvhZ6uTiBbaQ15S2q12asT47XAwtqMzhUm
 ```
@@ -122,6 +130,10 @@ mvhZ6uTiBbaQ15S2q12asT47XAwtqMzhUm
 mainnet
 
 ```bash
+$ node getBtcAddress.js --p2sh
+請輸入私鑰: L1ifct6bkazBWLJ8QKarA1icASL8z7gq38r63BJAjyqMge2Z4J4y
+39P2r6hvCDMMRidM9zEeWQ5MVwmbtzMjJ9
+
 $ node getBtcAddress.js --p2sh --key L1ifct6bkazBWLJ8QKarA1icASL8z7gq38r63BJAjyqMge2Z4J4y
 39P2r6hvCDMMRidM9zEeWQ5MVwmbtzMjJ9
 ```
@@ -129,6 +141,10 @@ $ node getBtcAddress.js --p2sh --key L1ifct6bkazBWLJ8QKarA1icASL8z7gq38r63BJAjyq
 testnet
 
 ```bash
+$ node getBtcAddress --test --p2sh
+請輸入私鑰: cV53vn1FmaAAXHHWExQJQtdKrHMP6vBtmaLMSYib6QP2oU8ch78g
+2N2JKLJS7Y9A4dJMb4LUFVi5sWsEPCUFdJ6
+
 $ node getBtcAddress --test --p2sh --key cV53vn1FmaAAXHHWExQJQtdKrHMP6vBtmaLMSYib6QP2oU8ch78g
 2N2JKLJS7Y9A4dJMb4LUFVi5sWsEPCUFdJ6
 ```
@@ -136,6 +152,10 @@ $ node getBtcAddress --test --p2sh --key cV53vn1FmaAAXHHWExQJQtdKrHMP6vBtmaLMSYi
 ### Ethereum Address
 
 ```bash
+$ node getEthAddress.js
+請輸入私鑰: 0x86b299c405b2254d95104dd0b8565a4a432d06ebcde39e7596d8fcded9a99913
+0xf9ecE109C4aCd8918088191f9476a493D224Ed85
+
 $ node getEthAddress.js --key 0x86b299c405b2254d95104dd0b8565a4a432d06ebcde39e7596d8fcded9a99913
 0xf9ecE109C4aCd8918088191f9476a493D224Ed85
 ```
