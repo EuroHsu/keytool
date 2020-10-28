@@ -196,12 +196,12 @@ $ node getEthAddress.js --key 0x86b299c405b2254d95104dd0b8565a4a432d06ebcde39e75
 
 ## 其他
 
-### 計算以太坊合約地址
+### Ethereum Contract Address
 
 ```bash
-$ node getEthContractAddress.js --info
+$ node getEthContractAddress.js
 以太坊合約的地址是根據創建者(sender)的地址以及創建者發送過的交易數量(nonce)來計算的
-sender 和 nonce 進行 RLP 編碼，然後用 Keccak-256 進行 hash 計算
+將 sender 和 nonce 進行 RLP 編碼，然後用 Keccak-256 進行 hash 計算
 請輸入sender: 0xB72FB3250268222E01A57b19B02db6268884BBDe
 請輸入nonce: 2
 合約地址: 0xA7254e5aF10793B520b4d4ad7F717b1b65aCeb4c
