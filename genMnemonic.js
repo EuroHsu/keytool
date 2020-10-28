@@ -20,23 +20,19 @@ if (info) {
     const p2pkh = bitcoin.payments.p2pkh({ network, pubkey: btcKeyPair.publicKey })
     console.log('BTC 普通地址')
     console.log('Path:', "\"m/44'/0'/0'/0/0\"")
-    console.log({
-      'Private Key': btcKeyPair.toWIF(),
-      'Public Key': btcKeyPair.publicKey.toString('hex'),
-      'Address': p2pkh.address,
-    })
+    console.log('Private Key:', btcKeyPair.toWIF())
+    console.log('Public Key:', btcKeyPair.publicKey.toString('hex'))
+    console.log('Address:', p2pkh.address)
 
     const btcKeyPair2 = root.derivePath("m/49'/0'/0'/0/0")
     const p2wpkh = bitcoin.payments.p2wpkh({ pubkey: btcKeyPair2.publicKey, network })
     const p2sh = bitcoin.payments.p2sh({ redeem: p2wpkh, network })
     console.log('BTC 隔離見證(兼容)地址')
     console.log('Path:', "\"m/49'/0'/0'/0/0\"")
-    console.log({
-      'Private Key': btcKeyPair2.toWIF(),
-      'Public Key': btcKeyPair2.publicKey.toString('hex'),
-      'Redeem script': p2sh.redeem.output.toString('hex'),
-      'Address': p2sh.address,
-    })
+    console.log('Private Key:', btcKeyPair2.toWIF())
+    console.log('Public Key:', btcKeyPair2.publicKey.toString('hex'))
+    console.log('Redeem script:', p2sh.redeem.output.toString('hex'))
+    console.log('Address:', p2sh.address)
 
     const btcKeyPair3 = root.derivePath("m/84'/0'/0'/0/0")
     const hash256 = crypto.createHash('sha256').update(btcKeyPair3.publicKey).digest()
@@ -46,21 +42,17 @@ if (info) {
     const encode = test ? 'tb' : 'bc'
     console.log('BTC 隔離見證(原生)地址')
     console.log('Path:', "\"m/84'/0'/0'/0/0\"")
-    console.log({
-      'Private Key': btcKeyPair3.toWIF(),
-      'Public Key': btcKeyPair3.publicKey.toString('hex'),
-      'Address': bech32.encode(encode, words)
-    })
+    console.log('Private Key:', btcKeyPair3.toWIF())
+    console.log('Public Key:', btcKeyPair3.publicKey.toString('hex'))
+    console.log('Address:', bech32.encode(encode, words))
 
     const hdWallet = hdkey.fromMasterSeed(seed)
     const ethKeyPair = hdWallet.derivePath("m/44'/60'/0'/0/0")
     console.log('ETH 普通地址')
     console.log('Path:', "\"m/44'/60'/0'/0/0\"")
-    console.log({
-      'Private Key': util.bufferToHex(ethKeyPair._hdkey._privateKey),
-      'Public Key': util.bufferToHex(ethKeyPair._hdkey._publicKey),
-      'Address': util.toChecksumAddress(util.pubToAddress(util.bufferToHex(ethKeyPair._hdkey._publicKey), true).toString('hex'))
-    })
+    console.log('Private Key:', util.bufferToHex(ethKeyPair._hdkey._privateKey))
+    console.log('Public Key:', util.bufferToHex(ethKeyPair._hdkey._publicKey))
+    console.log('Address:', util.toChecksumAddress(util.pubToAddress(util.bufferToHex(ethKeyPair._hdkey._publicKey), true).toString('hex')))
   })
 } else {
   console.log(mnemonic)
