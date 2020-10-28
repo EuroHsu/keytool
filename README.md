@@ -1,6 +1,6 @@
 # keytool
 
-簡單生成`Bitcoin`、`Ethereum`跟`EOS`的私鑰
+簡單生成`Bitcoin`跟`Ethereum`的私鑰
 
 ## 需要環境
 
@@ -20,29 +20,50 @@ umbrella desert resemble wrestle census chief hidden cheap void cluster forum la
 
 $ node genMnemonic.js --info
 Mnemonic: umbrella desert resemble wrestle census chief hidden cheap void cluster forum lawn
-BTC { 'Private Key': 'L3RV6KjiCeMFfMxJaLqhUTjfdNXsXL9PceS5FhDhrXfvnxQ3vyhf',
+BTC 普通地址
+Path: "m/44'/0'/0'/0/0"
+{ 'Private Key': 'L3RV6KjiCeMFfMxJaLqhUTjfdNXsXL9PceS5FhDhrXfvnxQ3vyhf',
   'Public Key': '02fbef8e5ce6d0b0b8d45ea8e6e2de818439610e415fae0e53bb0564ae2b29475b',
-  'P2PKH Address': '1Q4VJJGSVZkCUDjmcCyUuoGyYbDQYcN6yH',
-  'Redeem script': '0014fcf3c359e0035a466728e1e10c2211ba50582a5c',
-  'P2SH Address': '35ZmVc8wy9dnbtLkWzgecV1Sfgnbi1irQT' }
-ETH { 'Private Key': '0x8581dbc77b9addf6058e56521197e3834f9694ed1f11f96d0691d9a588098b34',
+  Address: '1Q4VJJGSVZkCUDjmcCyUuoGyYbDQYcN6yH' }
+BTC 隔離見證(兼容)地址
+Path: "m/49'/0'/0'/0/0"
+{ 'Private Key': 'L16cd9AcxpTwSJFEcFZbEUZmufyLUtKw6HPA9iwfDJk8ru6yiiTV',
+  'Public Key': '034625502510b5ac75bf2dbf2c05e6da7e397d10f1e172b980ef22e8629c3de126',
+  'Redeem script': '00146c2210be2bef56fb65598789c1a82cc79d63c828',
+  Address: '3Cau4QSJY3LqfcwaDPUmouATPT3er2zNnD' }
+BTC 隔離見證(原生)地址
+Path: "m/84'/0'/0'/0/0"
+{ 'Private Key': 'L1P9hWB9dsVGu7p474pvghjEidgWZYyunFRhs5kZ1s1fKUprNkUv',
+  'Public Key': '035bf57d78d22aeb1fa442ccca00e7bee360059a9e0ee6037b13147cbc66f0fcd2',
+  Address: 'bc1q6jgvkh76mwey8gr3t8q28vxwzptlfmzrk666ey' }
+ETH 普通地址
+Path: "m/44'/60'/0'/0/0"
+{ 'Private Key': '0x8581dbc77b9addf6058e56521197e3834f9694ed1f11f96d0691d9a588098b34',
   'Public Key': '0x02f4baca2232eae7bc4f9bf0feff18dac51f4952a694b6d55712470b1d1f2e39ac',
   Address: '0xecC6868649494C31BC4503C04C9C9B5c8Aa74CbE' }
-EOS { 'Private Key': '5Jojx7poMEtiWKLoQMcZRA6KDUb3vBPxQiyUq4HwBScYM6QPFv7',
-  'Public Key': 'EOS5wM6PEAYfR48kGKwd8twDFEHyyestZwQKwzv1eSdDuPnrLEpaG' }
 
 $ node genMnemonic.js --info --test
-Mnemonic: umbrella desert resemble wrestle census chief hidden cheap void cluster forum lawn
-BTC { 'Private Key': 'cTnUZEjZdi3WpoRZxkepqnEjFbqHBnF5ggaYN7gDMeKw3hQqa6Hg',
+BTC 普通地址
+Path: "m/44'/0'/0'/0/0"
+{ 'Private Key': 'cTnUZEjZdi3WpoRZxkepqnEjFbqHBnF5ggaYN7gDMeKw3hQqa6Hg',
   'Public Key': '02fbef8e5ce6d0b0b8d45ea8e6e2de818439610e415fae0e53bb0564ae2b29475b',
-  'P2PKH Address': 'n4aSbMMRJbBTFLDPKmwrjiVJQap7Sk1j3P',
-  'Redeem script': '0014fcf3c359e0035a466728e1e10c2211ba50582a5c',
-  'P2SH Address': '2Mw7yZM4yac98ofyJC8JXERzht2zmZZkk13' }
-ETH { 'Private Key': '0x8581dbc77b9addf6058e56521197e3834f9694ed1f11f96d0691d9a588098b34',
+  Address: 'n4aSbMMRJbBTFLDPKmwrjiVJQap7Sk1j3P' }
+BTC 隔離見證(兼容)地址
+Path: "m/49'/0'/0'/0/0"
+{ 'Private Key': 'cRTc64AUPtACbjiVzfNibo4qXuGk9LRdAKXdG9QAiRQ97eCrXXFm',
+  'Public Key': '034625502510b5ac75bf2dbf2c05e6da7e397d10f1e172b980ef22e8629c3de126',
+  'Redeem script': '00146c2210be2bef56fb65598789c1a82cc79d63c828',
+  Address: '2N49789NL9VrBsQa7tX6eRr9iboFpfL4foz' }
+BTC 隔離見證(原生)地址
+Path: "m/84'/0'/0'/0/0"
+{ 'Private Key': 'cRk9ARB14wBY4ZHKVUe442EJLryvE15brHaAyWD4WyffaDsYvTAP',
+  'Public Key': '035bf57d78d22aeb1fa442ccca00e7bee360059a9e0ee6037b13147cbc66f0fcd2',
+  Address: 'tb1q6jgvkh76mwey8gr3t8q28vxwzptlfmzruupfzh' }
+ETH 普通地址
+Path: "m/44'/60'/0'/0/0"
+{ 'Private Key': '0x8581dbc77b9addf6058e56521197e3834f9694ed1f11f96d0691d9a588098b34',
   'Public Key': '0x02f4baca2232eae7bc4f9bf0feff18dac51f4952a694b6d55712470b1d1f2e39ac',
   Address: '0xecC6868649494C31BC4503C04C9C9B5c8Aa74CbE' }
-EOS { 'Private Key': '5Jojx7poMEtiWKLoQMcZRA6KDUb3vBPxQiyUq4HwBScYM6QPFv7',
-  'Public Key': 'EOS5wM6PEAYfR48kGKwd8twDFEHyyestZwQKwzv1eSdDuPnrLEpaG' }
 ```
 
 ## 生成私鑰
@@ -86,17 +107,6 @@ $ node genEthKey.js
 $ node genEthKey.js --info
 Private Key: 0x86b299c405b2254d95104dd0b8565a4a432d06ebcde39e7596d8fcded9a99913
 Address: 0xf9ecE109C4aCd8918088191f9476a493D224Ed85
-```
-
-### EOS
-
-```bash
-$ node genEosKey.js
-5KKbQ56KwFTUU54cd8r9xtE1NB152iHstmqshb7k3qDJZVtCsiw
-
-$ node genEosKey.js --info
-Private Key: 5KKbQ56KwFTUU54cd8r9xtE1NB152iHstmqshb7k3qDJZVtCsiw
-Public Key: EOS8SzqgK9agCgHMUyACcpAbEnFD5fCrwKGWdPDnJtfMoB4f7cT3P
 ```
 
 ## 私鑰轉地址
@@ -147,6 +157,30 @@ $ node getBtcAddress --test --p2sh
 
 $ node getBtcAddress --test --p2sh --key cV53vn1FmaAAXHHWExQJQtdKrHMP6vBtmaLMSYib6QP2oU8ch78g
 2N2JKLJS7Y9A4dJMb4LUFVi5sWsEPCUFdJ6
+```
+
+### Bitcoin Bech32 Address
+
+mainnet
+
+```bash
+node getBtcAddress.js --bech32
+請輸入私鑰: L1P9hWB9dsVGu7p474pvghjEidgWZYyunFRhs5kZ1s1fKUprNkUv
+bc1q6jgvkh76mwey8gr3t8q28vxwzptlfmzrk666ey
+
+node getBtcAddress.js --bech32 --key L1P9hWB9dsVGu7p474pvghjEidgWZYyunFRhs5kZ1s1fKUprNkUv
+bc1q6jgvkh76mwey8gr3t8q28vxwzptlfmzrk666ey
+```
+
+testnet
+
+```bash
+node getBtcAddress.js --bech32 --test
+請輸入私鑰: cRk9ARB14wBY4ZHKVUe442EJLryvE15brHaAyWD4WyffaDsYvTAP
+tb1q6jgvkh76mwey8gr3t8q28vxwzptlfmzruupfzh
+
+node getBtcAddress.js --bech32 --test --key cRk9ARB14wBY4ZHKVUe442EJLryvE15brHaAyWD4WyffaDsYvTAP
+tb1q6jgvkh76mwey8gr3t8q28vxwzptlfmzruupfzh
 ```
 
 ### Ethereum Address
