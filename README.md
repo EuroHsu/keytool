@@ -90,6 +90,7 @@ Public Key: 0279edd7cabc898ccea6da73d20c08746d3f4f36c1692317d24dfd8a4b1e4fe7a5
 P2PKH Address: 1DTKdoBJcwYiRFR5u9mzbXyw98QGwoikuG
 Redeem script: 0014889be1300e556cd9370f03065ad45a2becd57871
 P2SH Address: 39P2r6hvCDMMRidM9zEeWQ5MVwmbtzMjJ9
+Bech32 Address: bc1q3zd7zvqw24kdjdc0qvr944z690kd27r3r4mpj4
 ```
 
 testnet
@@ -104,6 +105,7 @@ Public Key: 02da3b5f8dc6031422b85e2d905478510e91c5888117027f15206b1f4e090db5cf
 P2PKH Address: mvhZ6uTiBbaQ15S2q12asT47XAwtqMzhUm
 Redeem script: 0014a68b1a39f2e4b94b0975c5bf33f6d01d847f75f5
 P2SH Address: 2N2JKLJS7Y9A4dJMb4LUFVi5sWsEPCUFdJ6
+Bech32 Address: tb1q56935w0juju5kzt4ckln8aksrkz87a04wxkd7f
 ```
 
 ### Ethereum
