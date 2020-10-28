@@ -10,7 +10,7 @@ const util = require('ethereumjs-util')
 const test = Object.prototype.hasOwnProperty.call(argv, 'test')
 const network = test ? bitcoin.networks.testnet : bitcoin.networks.bitcoin
 const info = Object.prototype.hasOwnProperty.call(argv, 'info')
-const mnemonic = 'umbrella desert resemble wrestle census chief hidden cheap void cluster forum lawn'
+const mnemonic = bip39.generateMnemonic()
 
 if (info) {
   console.log('Mnemonic:', mnemonic)

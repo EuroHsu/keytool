@@ -17,7 +17,11 @@ npm install
 ```bash
 $ node genMnemonic.js
 umbrella desert resemble wrestle census chief hidden cheap void cluster forum lawn
+```
 
+含有 mainnet 地址資訊
+
+```bash
 $ node genMnemonic.js --info
 Mnemonic: umbrella desert resemble wrestle census chief hidden cheap void cluster forum lawn
 BTC 普通地址
@@ -41,7 +45,11 @@ Path: "m/44'/60'/0'/0/0"
 { 'Private Key': '0x8581dbc77b9addf6058e56521197e3834f9694ed1f11f96d0691d9a588098b34',
   'Public Key': '0x02f4baca2232eae7bc4f9bf0feff18dac51f4952a694b6d55712470b1d1f2e39ac',
   Address: '0xecC6868649494C31BC4503C04C9C9B5c8Aa74CbE' }
+```
 
+含有 testnet 地址資訊
+
+```bash
 $ node genMnemonic.js --info --test
 BTC 普通地址
 Path: "m/44'/0'/0'/0/0"
