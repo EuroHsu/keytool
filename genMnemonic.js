@@ -40,11 +40,13 @@ if (info) {
     const words = bech32.toWords(hash160)
     words.unshift(0)
     const encode = test ? 'tb' : 'bc'
+    const p2wpkh3 = bitcoin.payments.p2wpkh({ pubkey: btcKeyPair3.publicKey, network })
     console.log('BTC 隔離見證(原生)地址')
     console.log('Path:', "\"m/84'/0'/0'/0/0\"")
     console.log('Private Key:', btcKeyPair3.toWIF())
     console.log('Public Key:', btcKeyPair3.publicKey.toString('hex'))
     console.log('Address:', bech32.encode(encode, words))
+    console.log('Address2:', p2wpkh3.address)
 
     const hdWallet = hdkey.fromMasterSeed(seed)
     const ethKeyPair = hdWallet.derivePath("m/44'/60'/0'/0/0")
