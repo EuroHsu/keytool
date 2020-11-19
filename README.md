@@ -40,11 +40,17 @@ Path: "m/84'/0'/0'/0/0"
 Private Key: L1P9hWB9dsVGu7p474pvghjEidgWZYyunFRhs5kZ1s1fKUprNkUv
 Public Key: 035bf57d78d22aeb1fa442ccca00e7bee360059a9e0ee6037b13147cbc66f0fcd2
 Address: bc1q6jgvkh76mwey8gr3t8q28vxwzptlfmzrk666ey
+Address2: bc1q6jgvkh76mwey8gr3t8q28vxwzptlfmzrk666ey
 ETH 普通地址
 Path: "m/44'/60'/0'/0/0"
-Private Key: 0x8581dbc77b9addf6058e56521197e3834f9694ed1f11f96d0691d9a588098b34
-Public Key: 0x02f4baca2232eae7bc4f9bf0feff18dac51f4952a694b6d55712470b1d1f2e39ac
+Private Key: 8581dbc77b9addf6058e56521197e3834f9694ed1f11f96d0691d9a588098b34
+Public Key: 02f4baca2232eae7bc4f9bf0feff18dac51f4952a694b6d55712470b1d1f2e39ac
 Address: 0xecC6868649494C31BC4503C04C9C9B5c8Aa74CbE
+TRON 普通地址
+Path: "m/44'/195'/0'/0/0"
+Private Key: 74d5e7387d058723ac5d9db41dbceacd9fc49f0fb5800d9894eddf1294d0c57d
+Public Key: 038ad82aed2a6453155038c32d49add0c539dfcebf3bfb03cf3f9c31f804205d17
+Address: TYKaSeXxHYZCB9Ta8CxKTmf9GDBx29AoVz
 ```
 
 testnet
@@ -70,9 +76,14 @@ Public Key: 035bf57d78d22aeb1fa442ccca00e7bee360059a9e0ee6037b13147cbc66f0fcd2
 Address: tb1q6jgvkh76mwey8gr3t8q28vxwzptlfmzruupfzh
 ETH 普通地址
 Path: "m/44'/60'/0'/0/0"
-Private Key: 0x8581dbc77b9addf6058e56521197e3834f9694ed1f11f96d0691d9a588098b34
-Public Key: 0x02f4baca2232eae7bc4f9bf0feff18dac51f4952a694b6d55712470b1d1f2e39ac
+Private Key: 8581dbc77b9addf6058e56521197e3834f9694ed1f11f96d0691d9a588098b34
+Public Key: 02f4baca2232eae7bc4f9bf0feff18dac51f4952a694b6d55712470b1d1f2e39ac
 Address: 0xecC6868649494C31BC4503C04C9C9B5c8Aa74CbE
+TRON 普通地址
+Path: "m/44'/195'/0'/0/0"
+Private Key: 74d5e7387d058723ac5d9db41dbceacd9fc49f0fb5800d9894eddf1294d0c57d
+Public Key: 038ad82aed2a6453155038c32d49add0c539dfcebf3bfb03cf3f9c31f804205d17
+Address: TYKaSeXxHYZCB9Ta8CxKTmf9GDBx29AoVz
 ```
 
 ## 生成私鑰
