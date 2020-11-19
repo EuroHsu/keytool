@@ -6,6 +6,7 @@ const bitcoin = require('bitcoinjs-lib')
 const crypto = require('crypto')
 const hdkey = require('ethereumjs-wallet/hdkey')
 const util = require('ethereumjs-util')
+const TronWeb = require('tronweb')
 
 const test = Object.prototype.hasOwnProperty.call(argv, 'test')
 const network = test ? bitcoin.networks.testnet : bitcoin.networks.bitcoin
@@ -52,9 +53,16 @@ if (info) {
     const ethKeyPair = hdWallet.derivePath("m/44'/60'/0'/0/0")
     console.log('ETH 普通地址')
     console.log('Path:', "\"m/44'/60'/0'/0/0\"")
-    console.log('Private Key:', util.bufferToHex(ethKeyPair._hdkey._privateKey))
-    console.log('Public Key:', util.bufferToHex(ethKeyPair._hdkey._publicKey))
+    console.log('Private Key:', ethKeyPair._hdkey._privateKey.toString('hex'))
+    console.log('Public Key:', ethKeyPair._hdkey._publicKey.toString('hex'))
     console.log('Address:', util.toChecksumAddress(util.pubToAddress(util.bufferToHex(ethKeyPair._hdkey._publicKey), true).toString('hex')))
+
+    const trxKeyPair = hdWallet.derivePath("m/44'/195'/0'/0/0")
+    console.log('TRON 普通地址')
+    console.log('Path:', "\"m/44'/195'/0'/0/0\"")
+    console.log('Private Key:', trxKeyPair._hdkey._privateKey.toString('hex'))
+    console.log('Public Key:', trxKeyPair._hdkey._publicKey.toString('hex'))
+    console.log('Address:', new TronWeb('https://api.trongrid.io', 'https://api.trongrid.io').address.fromPrivateKey(trxKeyPair._hdkey._privateKey.toString('hex')))
   })
 } else {
   console.log(mnemonic)
